@@ -85,7 +85,7 @@
     position: absolute;
     left: 0;
     top: 43px;
-    display: flex;
+    display: none;
     justify-content: end;
 }
 
@@ -103,7 +103,9 @@
     padding: 5px 5px;
 }
 
-
+#search-sug ul li:hover{
+    background-color: rgb(199, 197, 197);
+}
 
 
 #logo-div {

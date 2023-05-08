@@ -34,11 +34,11 @@
             <!-- <img src="" alt="logo"> -->
         </div>
         <ul>
-            <li>alkajsdlkajsklj</li>
-            <li>alkajsdlkajsklj</li>
-            <li>alkajsdlkajsklj</li>
-            <li>alkajsdlkajsklj</li>
-            <li>alkajsdlkajsklj</li>
+            <li>Suggestion 1</li>
+            <li>Suggestion 2</li>
+            <li>Suggestion 3</li>
+            <li>Suggestion 4</li>
+            <li>Suggestion 5</li>
         </ul>
         <div id="hid-burger">
 
@@ -106,11 +106,16 @@
         cancel.classList.remove('show');
         hide.classList.remove('show');
         hide.classList.toggle('hide');
-        // }
-        // document.getElementById('burger-clicked').style.display = 'none';
-        // document.getElementById('burger-clicked').classList.toggle('hide');
-        // document.getElementById('h1').classList.toggle('active');
     });
+
+
+    let search = document.getElementById('search-inp');
+    search.addEventListener('blur',e=>{
+        document.getElementById('search-sug').style.display = 'none'
+    });
+    search.addEventListener('mousedown',e=>{
+        document.getElementById('search-sug').style.display = 'flex'
+    })
 </script>
 
 </html>
