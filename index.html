@@ -31,7 +31,6 @@
     </nav>
     <div id="search-sug">
         <div id="hid-logo-div">
-            <!-- <img src="" alt="logo"> -->
         </div>
         <ul>
             <li>Suggestion 1</li>
@@ -53,7 +52,7 @@
                 <div class="can-border-childs" id="can-child-2"></div>
             </div>
         </div>
-        <ul id="ul-burger">
+        <ul id="ul-burger" class="hide">
             <li><a href="">One</a></li>
             <li><a href="">Two</a></li>
             <li><a href="">Three</a></li>
@@ -80,42 +79,6 @@
         nihil dicta error repellat nam asperiores quibusdam voluptatibus blanditiis hic?
     </h1>
 </body>
-<script>
-    let burger = document.getElementById('burger');
-    burger.addEventListener('mousedown', e => {
-        console.log('clicked')
-        let show = document.getElementById('burger-clicked');
-        let sideLists = document.getElementById('ul-burger');
-        let cancel = document.getElementById('cancel-logo');
-        cancel.classList.toggle('show');
-        sideLists.classList.toggle('show');
-        show.classList.remove('hide');
-        show.classList.toggle('show');
-    });
-
-
-    let cancel = document.getElementById('can-border');
-    cancel.addEventListener('mousedown', e => {
-        console.log('cancel');
-        let hide = document.getElementById('burger-clicked');
-        let sideLists = document.getElementById('ul-burger');
-        let cancel = document.getElementById('cancel-logo');
-        // if(hide.className == 'show'){
-        sideLists.classList.remove('show');
-        sideLists.classList.toggle('hide');
-        cancel.classList.remove('show');
-        hide.classList.remove('show');
-        hide.classList.toggle('hide');
-    });
-
-
-    let search = document.getElementById('search-inp');
-    search.addEventListener('blur',e=>{
-        document.getElementById('search-sug').style.display = 'none'
-    });
-    search.addEventListener('mousedown',e=>{
-        document.getElementById('search-sug').style.display = 'flex'
-    })
-</script>
+<script src="index.js"></script>
 
 </html>

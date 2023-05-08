@@ -156,6 +156,7 @@
     }
 
     #burger-clicked {
+        /* display: none; */
         background-color: rgb(59, 63, 63);
         position: fixed;
         top: 0;
@@ -185,6 +186,7 @@
     #burger-clicked.hide {
         animation-name: fade-out;
         animation-duration: 0.5s;
+        /* display: none; */
     }
 
     @keyframes fade-out {
@@ -252,7 +254,7 @@
         position: absolute;
         left: 0;
         top: 43px;
-        display: flex;
+        display: none;
         justify-content: center;
     }
 
