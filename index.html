@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="nav-main">
+        <div id="logo-div">
+            <img src="" alt="logo">
+        </div>
+        <ul id="ul">
+            <li><a href="">One</a></li>
+            <li><a href="">Two</a></li>
+            <li><a href="">Three</a></li>
+            <li><a href="">Four</a></li>
+        </ul>
+        <div id="search-div">
+            <input type="text" id="search-inp" placeholder="Search">
+        </div>
+        <div id="burger">
+            <div class="burger-childs"></div>
+            <div class="burger-childs"></div>
+            <div class="burger-childs"></div>
+        </div>
+    </nav>
+    <div id="search-sug">
+        <div id="hid-logo-div">
+            <!-- <img src="" alt="logo"> -->
+        </div>
+        <ul>
+            <li>alkajsdlkajsklj</li>
+            <li>alkajsdlkajsklj</li>
+            <li>alkajsdlkajsklj</li>
+            <li>alkajsdlkajsklj</li>
+            <li>alkajsdlkajsklj</li>
+        </ul>
+        <div id="hid-burger">
+
+        </div>
+    </div>
+
+
+    <div id="burger-clicked">
+        <div id="cancel-logo">
+            <div id="can-border">
+                <div class="can-border-childs" id="can-child-1"></div>
+                <div class="can-border-childs" id="can-child-2"></div>
+            </div>
+        </div>
+        <ul id="ul-burger">
+            <li><a href="">One</a></li>
+            <li><a href="">Two</a></li>
+            <li><a href="">Three</a></li>
+            <li><a href="">Four</a></li>
+        </ul>
+    </div>
+
+    <h1 id="h1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eveniet iusto! Repudiandae quis error
+        debitis facilis nesciunt ab, veniam quisquam dolorem, eligendi expedita laborum quo itaque saepe aliquid
+        cupiditate! Similique ipsum ipsa quisquam in.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga odit vitae nihil officia natus accusamus non ad
+        reprehenderit repudiandae voluptas, doloremque asperiores praesentium quod deleniti quibusdam perspiciatis atque
+        recusandae! Fuga, adipisci consequatur sequi maxime voluptates minus cum necessitatibus. Atque suscipit eligendi
+        odit fugiat dolor recusandae eaque aut expedita voluptates! Vero illo molestias maxime deleniti nisi voluptatum
+        ipsum! A dicta ea quisquam consectetur aperiam nostrum doloremque temporibus optio, ullam, quaerat et. Quas quos
+        dignissimos sed ad consequuntur placeat dolor, id est ut dolore consectetur hic error sit deleniti voluptate
+        illum quod ratione eius cumque? Mollitia repellat, minima voluptates ea unde dolores quos nemo officiis modi
+        quidem hic? Doloribus tenetur eveniet sint dignissimos vel quis incidunt officiis laudantium excepturi, nulla
+        cupiditate sit, quos quidem voluptatibus repellat inventore at maiores non tempore aperiam, perferendis magnam
+        expedita libero. Explicabo eligendi voluptates veniam facilis totam ipsum exercitationem similique cupiditate
+        quasi unde, doloremque doloribus quisquam amet vitae incidunt odio numquam quo? Inventore quos omnis sed tempore
+        incidunt doloremque cumque ab quam eveniet tenetur laborum, nulla, corrupti accusamus porro eum? Voluptatem esse
+        ipsa aut cupiditate odio recusandae quia fuga veniam quasi fugiat officia excepturi, cumque consequatur sed
+        nihil dicta error repellat nam asperiores quibusdam voluptatibus blanditiis hic?
+    </h1>
+</body>
+<script>
+    let burger = document.getElementById('burger');
+    burger.addEventListener('mousedown', e => {
+        console.log('clicked')
+        let show = document.getElementById('burger-clicked');
+        let sideLists = document.getElementById('ul-burger');
+        let cancel = document.getElementById('cancel-logo');
+        cancel.classList.toggle('show');
+        sideLists.classList.toggle('show');
+        show.classList.remove('hide');
+        show.classList.toggle('show');
+    });
+
+
+    let cancel = document.getElementById('can-border');
+    cancel.addEventListener('mousedown', e => {
+        console.log('cancel');
+        let hide = document.getElementById('burger-clicked');
+        let sideLists = document.getElementById('ul-burger');
+        let cancel = document.getElementById('cancel-logo');
+        // if(hide.className == 'show'){
+        sideLists.classList.remove('show');
+        sideLists.classList.toggle('hide');
+        cancel.classList.remove('show');
+        hide.classList.remove('show');
+        hide.classList.toggle('hide');
+        // }
+        // document.getElementById('burger-clicked').style.display = 'none';
+        // document.getElementById('burger-clicked').classList.toggle('hide');
+        // document.getElementById('h1').classList.toggle('active');
+    });
+</script>
+
+</html>
